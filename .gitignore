@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+
+# dataset se preuzima kroz torchvision
+data/raw/
+
+# istrenirani modeli ostaju lokalno
+results/checkpoints/*.pth
+
+*.zip
+Thumbs.db

@@ -1,0 +1,5 @@
+Model,Broj parametara,Najbolja epoha,Validaciona tacnost,Test tacnost
+ResNet18,11173962,6,87.04,87.56
+DenseNet121,6956426,8,91.44,91.81
+DPN,9778522,10,90.81,91.67
+ViT,299658,10,86.2,86.37
