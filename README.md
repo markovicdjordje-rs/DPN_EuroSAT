@@ -24,13 +24,15 @@ Za trening slike korišćeno je nasumično horizontalno i vertikalno okretanje. 
 ```text
 DPN_EuroSAT/
 |-- data/
-|   |-- raw/
+|   |-- raw/                    # preuzima se lokalno
 |   `-- splits/
 |-- notebooks/
 |   |-- 01_eurosat_analysis.ipynb
 |   `-- 02_train_final.ipynb
+|-- docs/
+|   `-- Djordje_Markovic_EuroSAT_projekat.pdf
 |-- results/
-|   |-- checkpoints/
+|   |-- checkpoints/            # čuva se lokalno
 |   |-- figures/
 |   `-- metrics/
 |-- src/
@@ -39,8 +41,13 @@ DPN_EuroSAT/
 |       |-- densenet.py
 |       |-- dpn.py
 |       `-- vit.py
-`-- tests/
+`-- tests/                       # lokalni folder za provere
 ```
+
+Direktorijumi `data/raw`, `results/checkpoints` i `tests` kreiraju se ili koriste
+lokalno i zato ne moraju biti vidljivi na GitHubu. Skup podataka može ponovo da
+se preuzme kroz `torchvision`, dok checkpoint fajlovi nisu postavljeni zbog
+veličine.
 
 ## Treniranje
 
@@ -69,4 +76,5 @@ python -m pip install torch torchvision matplotlib pandas scikit-learn jupyter
 
 Zatim se redom otvaraju notebook fajlovi iz foldera `notebooks`. Prvi notebook služi za pregled podataka, a drugi sadrži treniranje, testiranje i poređenje modela.
 
-Sačuvani rezultati, grafikoni i istrenirani modeli nalaze se u folderu `results`.
+Sačuvani rezultati i grafikoni nalaze se u folderu `results`. Checkpointi
+istreniranih modela ostaju lokalno i nisu postavljeni na GitHub.
